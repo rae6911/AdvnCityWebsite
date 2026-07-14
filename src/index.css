@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply font-sans bg-bg-light text-text-dark antialiased;
+  }
+  
+  /* Make all text slightly smaller on tablet mode (md breakpoint to lg breakpoint) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    html {
+      font-size: 14.5px;
+    }
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-5;
+  }
+}
+
