@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import main_view from '../assets/main_view.jpg';
+
 
 const Hero = () => {
   const images = [
-    '/images/hero_solar_roof.jpg',
+    main_view,
     '/images/hero_solar_close.jpg',
     '/images/hero_cctv_roof.jpg',
     '/images/hero_cctv_wall.jpg',
@@ -13,7 +15,7 @@ const Hero = () => {
   const [activeImage, setActiveImage] = useState(images[0]);
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: { staggerChildren: 0.2, delayChildren: 0.3 }
     }
@@ -25,7 +27,7 @@ const Hero = () => {
   };
 
   return (
-    <motion.section 
+    <motion.section
       className="container-custom text-center pt-20 pb-16" id="home"
       variants={containerVariants}
       initial="hidden"
@@ -50,8 +52,8 @@ const Hero = () => {
         </div>
         <div className="grid grid-cols-5 gap-2 md:gap-4">
           {images.map((img, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-square md:aspect-auto md:h-32 transition-all duration-300 ${activeImage === img ? 'ring-4 ring-primary-teal scale-105' : 'hover:scale-105 opacity-80 hover:opacity-100'}`}
               onClick={() => setActiveImage(img)}
             >

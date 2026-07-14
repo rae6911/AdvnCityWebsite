@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   return (
     <footer className="bg-primary-teal py-10 mt-16 overflow-hidden">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -23,7 +23,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex gap-4">
-          <a href="#" className="w-10 h-10 rounded-full bg-primary-gold flex justify-center items-center text-white text-xl hover:-translate-y-1 transition-transform">
+          <a href="https://www.facebook.com/AdvnCityCorp" className="w-10 h-10 rounded-full bg-primary-gold flex justify-center items-center text-white text-xl hover:-translate-y-1 transition-transform">
             <i className='bx bxl-facebook'></i>
           </a>
           <a href="#" className="w-10 h-10 rounded-full bg-primary-gold flex justify-center items-center text-white text-xl hover:-translate-y-1 transition-transform">
