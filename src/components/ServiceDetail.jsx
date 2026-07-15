@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Overview from './Overview';
 
 const serviceDetailsData = {
   'cctv-installation': {
@@ -134,6 +135,9 @@ const ServiceDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Overview Section */}
+      <Overview serviceId={id} />
     </div>
   );
 };
